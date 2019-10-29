@@ -8,7 +8,7 @@ Example : Gradual Warmup for 100 epoch, after that, use cosine-annealing.
 ## Install
 
 ```
-$ pip install git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
+$ pip install git+https://github.com/saareliad/pytorch-gradual-warmup-lr.git
 ```
 
 ## Usage
@@ -25,3 +25,8 @@ for epoch in range(train_epoch):
     scheduler_warmup.step()     # 10 epoch warmup, after that schedule as scheduler_cosine
     ...
 ```
+## Changes from original repo
+This is my own fork of https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
+My changes add compatibility with Pytorch >= 1.1,
+See discussion [here](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate)
+(Kept on my own fork to maintain stability across existing projects)
