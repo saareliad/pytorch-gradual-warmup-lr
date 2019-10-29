@@ -22,6 +22,6 @@ scheduler_warmup = GradualWarmupScheduler(optimizer, multiplier=8, total_epoch=1
 for epoch in range(train_epoch):
     # train(...)
     # validate(...)
-    scheduler_warmup.step()     # 10 epoch warmup, after that schedule as scheduler_plateau
+    scheduler_warmup.step()     # 10 epoch warmup, after that schedule as scheduler_cosine
     ...
 ```
